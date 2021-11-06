@@ -1,0 +1,117 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  --hue: 200;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+  font-family: "Heebo", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+.main-container {
+  margin: 10px;
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+  direction: rtl;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.question {
+  font-size: 25px;
+}
+
+.btn {
+  --hue: 200;
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  font-family: "Heebo", sans-serif;
+  font-size: 20px;
+}
+
+.btn:active {
+  color: black;
+  background-color: white;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.share-btn {
+  margin-right: 16px;
+}
+
+.ad-img {  
+  max-width: 100%;
+  max-height: 100vh;
+  height: auto;
+}
+
+.x:after {
+  position: absolute;
+  content: "\274c";
+  color: #FFF;
+}
