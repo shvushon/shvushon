@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html charset="utf-8">
+<html lang="he" dir="rtl">
 
 <head>
+  <meta charset="utf-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG4533JRTY"></script>
   <script>
@@ -12,10 +13,13 @@
     gtag('config', 'G-LG4533JRTY');
   </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#0f172a">
   <link href="styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:400,500,700,800">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <script defer src="ugly-script.js"></script>
   <title>שבושון</title>
@@ -32,45 +36,50 @@
   <div class="main-container">
 
     <div id="start-container">
+      <div class="eyebrow">מבחן התאמה לישיבה</div>
       <h1>ברוכים הבאים ל"שבושון"</h1>
-      שמיניסט יקר! לפניך שאלון שבו תוכל לגלות איזו ישיבה מתאימה לך.<br>
-      ישנם 11 מאפיינים. עליך לדרג מ1 עד 5 כל מאפיין - כמה חשוב לך שיהיה בישיבה.<br>
-      השאלון אינו ח"ו מדרג ישיבות אלא עובד על בסיס התאמה אישית.<br>
-      השאלון הינו המלצה כללית בלבד ואינו מהווה תחליף לשיחה עם הר"מ/המחנך בעניין בחירת הישיבה.<br>
-      בהצלחה!<br><br>
+      <p>שמיניסט יקר! לפניך שאלון שבו תוכל לגלות איזו ישיבה מתאימה לך.</p>
+      <p>ישנם 11 מאפיינים. עליך לדרג מ-1 עד 5 כל מאפיין - כמה חשוב לך שיהיה בישיבה.</p>
+      <p>השאלון אינו ח"ו מדרג ישיבות אלא עובד על בסיס התאמה אישית.</p>
+      <p>השאלון הינו המלצה כללית בלבד ואינו מהווה תחליף לשיחה עם הר"מ/המחנך בעניין בחירת הישיבה.</p>
+      <p>בהצלחה!</p>
       <button id="start-btn" class="start-btn btn">התחל</button>
-      <br><br>
-      *השאלון מבוסס על מידע שנאסף מביינישים ובוגרי ישיבות רבים.
+      <p class="fine-print">*השאלון מבוסס על מידע שנאסף מביינישים ובוגרי ישיבות רבים.</p>
     </div>
 
     <div id="questions-container" class="hide">
-      <h1>שבושון</h1>
       <div id="question" class="question">שאלה</div>
       <div id="answer-buttons" class="btn-grid"></div>
     </div>
 
     <div id="results-container" class="hide">
-      <h1>הישיבות המומלצות עבורך הן:</h1>
-      <h2 id="res0"></h2>
-      <h2 id="res1"></h2>
-      <h2 id="res2"></h2>
+      <div class="section-head">
+        <div class="eyebrow">התוצאות שלך</div>
+        <h1>הישיבות המומלצות עבורך הן:</h1>
+      </div>
+      <div class="result-list">
+        <h2 id="res0"></h2>
+        <h2 id="res1"></h2>
+        <h2 id="res2"></h2>
+      </div>
       <button id="restart" class="btn">התחל מחדש</button>
-      <br><br>
-      לשאר המיזמים מבית "שבושון":<br>
-      <a href="https://shvushon.github.io/midrashon">מדרשון</a><br>
-      <a href="https://shvushon.github.io/shlichim">שליחון</a><br>
-      <a href="https://shvushon.github.io/shvushon2">שבושון 2</a><br>
-      <a href="https://shvushon.github.io/hahamim">חזלון</a><br>
-      <br><br>
-      <b>יוצרים:</b><br>
-      שלמה אברמסון<br>
-      אורי בובליל<br>
-      נתאי קסנר<br>
+      <div class="results-footer">
+        <div class="supporting-copy">לשאר המיזמים מבית "שבושון":</div>
+        <div class="project-links">
+          <a href="https://shvushon.github.io/midrashon">מדרשון</a>
+          <a href="https://shvushon.github.io/shlichim">שליחון</a>
+          <a href="https://shvushon.github.io/shvushon2">שבושון 2</a>
+          <a href="https://shvushon.github.io/hahamim">חזלון</a>
+        </div>
+        <div class="supporting-copy"><strong>יוצרים:</strong> שלמה אברמסון, אורי בובליל, נתאי קסנר</div>
+      </div>
     </div>
 
     <div id="loading-container" class="hide">
-      <h2>טוען נתונים...</h2>
-      <div class="loader" id="loader"></div>
+      <div class="loading-card">
+        <h2>טוען נתונים...</h2>
+        <div class="loader" id="loader"></div>
+      </div>
     </div>
 
   </div>
